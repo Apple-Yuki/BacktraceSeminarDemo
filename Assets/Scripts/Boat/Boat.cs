@@ -37,6 +37,8 @@ namespace BoatAttack
         private Object _controller;
         private int _playerIndex;
 
+        private GameObject fooBar;
+
         // Shader Props
         private static readonly int LiveryPrimary = Shader.PropertyToID("_Color1");
         private static readonly int LiveryTrim = Shader.PropertyToID("_Color2");
@@ -146,6 +148,7 @@ namespace BoatAttack
 
             if (nextWp != index) return;
             _wpCount = nextWp;
+            fooBar.SetActive(true);
 
             if (index != 0) return;
             LapCount++;
